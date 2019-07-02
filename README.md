@@ -19,12 +19,11 @@ This Linkset uses only [SKOS Mapping Properties](https://www.w3.org/TR/skos-refe
 This repository contains the following files and folders:
 
 * [README.md](README.md) - this file
-* [imports/](imports/) - background information: the LGPC & COFOG vocabularies as RDF (turtle) files
-* [data.ttl](data.ttl) - this Linkset's links as an RDF (turtle) file
+* [resources/](resources/) - background information: the LGPC & COFOG vocabularies as RDF (turtle) files as well as the original LGCP document publication which contains the correspondence information used for this Linkset
 * [header.ttl](header.ttl) - this Linkset’s data.ttl header information, stored separately for ease of access
-* [example-data.ttl](example-data.ttl) - 5 Statements from the Linkset for ease of access, in RDF (turtle) format, as per the main data file but none of the whole-of-Linkset information
-* [example-data-unreified.ttl](example-data-unreified.ttl) - 5 Statements from the Linkset but flattened, 'unreified', for even easier use
-* [methods/](methods/) - a folder containing the interim correspondences.xlsx file used for correspondence transpcription from the LGPC PDF document
+* [data.ttl](data.ttl) - this Linkset's links as an RDF (turtle) file
+* [data-flat.ttl](data-flat.ttl) - the Linkset's links as triples, unreified
+* [methods/](methods/) - a folder containing the interim correspondences.xlsx file used for correspondence transpcription from the LGPC PDF document and a Python script to turn data-flat.ttl into data.ttl
 
 
 ## Rights & License
