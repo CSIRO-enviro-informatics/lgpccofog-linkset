@@ -1,0 +1,830 @@
+@prefix : <http://linked.data.gov.au/def/lgpc/> .
+@prefix lgpc: <http://linked.data.gov.au/def/lgpc> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+lgpc: a skos:ConceptScheme ;
+  rdfs:label "Local Government Purpose Classification"@en ;
+  dct:publisher [
+    sdo:name "Australian Bureau of Statistics" ;
+    sdo:identifier <http://catalogue.linked.data.gov.au/org/abs> ;
+  ] ;
+  dct:contributor [
+    sdo:name "Nicholas J. Car" ;
+    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+    sdo:email <mailto:nicholas.car@csiro.au> ;
+  ] ;
+  dc:source "This vocabulariy's content is taken directly from the ABS' publication 5514.0.55.002, Local Government Purpose Classification - Australia - 2008" ;
+  rdfs:seeAlso <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/5514.0.55.0022008?OpenDocument> ;
+  dct:created "2019-07-02"^^xsd:date ;
+  rdfs:comment """This is a SKOS representation of the Australian Bureau of Statistics (ABS)'s Local Government Purpose Classification (LGPC) for use in the collection, analysis and dissemination of local government finance statistics in Australia.'""";
+  owl:versionInfo "As per ABS source data, no additions" .
+
+
+:01 a skos:Concept ;
+  skos:prefLabel "General Public Services" ;
+	skos:definition "This division includes administration, support, regulation, research, and operation of general public services. General public services include legislative and executive affairs, financial and fiscal affairs, external affairs, general research and general services. " ;
+	skos:topConceptOf lgpc: .
+
+:03 a skos:Concept ;
+	skos:prefLabel "Public Order and Safety" ;
+	skos:definition "This division includes administration and operation of services connected with public order and safety within the scope of local government. Such services include fire-protection and control of domestic animals and livestock. " ;
+	skos:topConceptOf lgpc: .
+
+:04 a skos:Concept ;
+	skos:prefLabel "Economic Affairs" ;
+	skos:definition "This division includes administration, operation and management of economic affairs. Economic affairs include general economic, commercial and labour affairs, agriculture and forestry, fuel and energy, transport and other industries. " ;
+	skos:topConceptOf lgpc: .
+
+:05 a skos:Concept ;
+	skos:prefLabel "Environmental Protection" ;
+	skos:definition "This division includes activities and services connected with environmental protection. Such services include waste management; pollution abatement; protection of biodiversity and landscape; and protection and remediation of soil, groundwater and surface water. " ;
+	skos:topConceptOf lgpc: .
+
+:06 a skos:Concept ;
+	skos:prefLabel "Housing and Community Ammenities" ;
+	skos:definition "This division includes the administration, regulation and provision of housing and community amenities. Such amenities include housing, housing and community development, water supply and street lighting. " ;
+	skos:topConceptOf lgpc: .
+
+:07 a skos:Concept ;
+	skos:prefLabel "Health" ;
+	skos:definition "This division includes the administration, operation and management of health services. Such services include medical services provided for outpatients, nursing and convalescent home services and public health services. " ;
+	skos:topConceptOf lgpc: .
+
+:08 a skos:Concept ;
+	skos:prefLabel "Recreation, Culture and Religion" ;
+	skos:definition "This division includes the administration, regulation, support and operation of recreation, cultural and religious services. Such services include facilities and venues; recreation parks and reserves; assistance to participation; museums; libraries; zoological and botanic parks and aquaria; performing arts; community activities and religious services. " ;
+	skos:topConceptOf lgpc: .
+
+:09 a skos:Concept ;
+	skos:prefLabel "Education" ;
+	skos:definition "This division includes the administration, inspection, support and operation of education services provided to individual students, and services provided on a collective basis. Education services include pre-primary school education and services subsidiary to education, such as transport of students. " ;
+	skos:topConceptOf lgpc: .
+
+:10 a skos:Concept ;
+	skos:prefLabel "Social Protection" ;
+	skos:definition "This division includes administration, regulation, operation and support of social protection services and assistance delivered to children and families. Such services include day care, aged services and shelter accommodation. " ;
+	skos:topConceptOf lgpc: .
+
+:011 a skos:Concept ;
+	skos:prefLabel "Executive and legislative functions, financial and fiscal affairs" ;
+	skos:definition "This group includes administration, operation and support of executive and legislative functions, and financial and fiscal affairs. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :01 .
+
+:012 a skos:Concept ;
+	skos:prefLabel "Public debt transactions" ;
+	skos:definition "This group includes interest payments and underwriting and floating government loans. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :01 .
+
+:013 a skos:Concept ;
+	skos:prefLabel "General purpose intergovernment transactions" ;
+	skos:definition "This group includes outlays relating to grants, advances or other intergovernment transactions that cannot be allocated to purpose. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :01 .
+
+:019 a skos:Concept ;
+	skos:prefLabel "General public services n.e.c." ;
+	skos:definition "This group includes general public services which are not connected to a specific function and which are usually undertaken by the central office of council. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :01 .
+
+:031 a skos:Concept ;
+	skos:prefLabel "Fire-protection services" ;
+	skos:definition "This group includes the administration and operation of services for fire safety and the prevention of fire. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :03 .
+
+:032 a skos:Concept ;
+	skos:prefLabel "Control of domestic animals and livestock" ;
+	skos:definition "This group includes administration and operation of programs relating to control of domestic animals and stray cattle. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :03 .
+
+:039 a skos:Concept ;
+	skos:prefLabel "Public order and safety n.e.c." ;
+	skos:definition "This group includes administration and operation of programs for public safety not elsewhere classified to LGPC 03. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :03 .
+
+:041 a skos:Concept ;
+	skos:prefLabel "General economic, commercial and labour affairs" ;
+	skos:definition "This group includes the administration and operation of general economic, commercial and labour affairs. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:042 a skos:Concept ;
+	skos:prefLabel "Agriculture and forestry" ;
+	skos:definition "This group includes the administration of services to and operation of the agriculture and forestry industries. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:043 a skos:Concept ;
+	skos:prefLabel "Fuel and energy" ;
+	skos:definition "This group includes the administration and operation of fuel and energy services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:044 a skos:Concept ;
+	skos:prefLabel "Road transport" ;
+	skos:definition "This group includes all aspects of servicing and operating the road system, including maintenance, construction, rehabilitation and transport services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:045 a skos:Concept ;
+	skos:prefLabel "Other transport services" ;
+	skos:definition "This group includes administration, operation and supervision of transport services other than road transport. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:046 a skos:Concept ;
+	skos:prefLabel "Other industries" ;
+	skos:definition "This group includes administration, operation and supervision of all industries not elsewhere classified to LGPC 04. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:049 a skos:Concept ;
+	skos:prefLabel "Economic affairs n.e.c." ;
+	skos:definition "This group includes administration and operation of economic affairs not elsewhere classified to LGPC 04. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :04 .
+
+:051 a skos:Concept ;
+	skos:prefLabel "Solid waste management" ;
+	skos:definition "This group includes monitoring, reduction, collection, treatment and disposal of all types of solid waste. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:052 a skos:Concept ;
+	skos:prefLabel "Waste water management" ;
+	skos:definition "This group includes activities relating to the monitoring, reduction, collection, reticulation or treatment of all waste water including that intended for reuse or recycling. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:053 a skos:Concept ;
+	skos:prefLabel "Emissions and air pollution abatement and management" ;
+	skos:definition "This group includes activities relating to the measurement and control of emissions and air pollution to protect air quality and climate. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:054 a skos:Concept ;
+	skos:prefLabel "Protection of biodiversity and habitat" ;
+	skos:definition "This group includes activities relating to the protection of biodiversity and habitat, including native plants and animals, habitats and ecosystems. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:055 a skos:Concept ;
+	skos:prefLabel "Protection and remediation of soil, groundwater and surface water" ;
+	skos:definition "This group involves measures and activities aimed at the protection and remediation of soil, groundwater and surface water from pollution and physical degradation. Activities may include prevention of pollutant infiltration, reduction of pollutants and protection from soil erosion, salinity and other physical degradation. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:059 a skos:Concept ;
+	skos:prefLabel "Environmental protection n.e.c." ;
+	skos:definition "This group includes all aspects of administration, management and support for environmental protection not elsewhere classified to LGPC 05. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :05 .
+
+:061 a skos:Concept ;
+	skos:prefLabel "Provision of housing and housing development" ;
+	skos:definition "This group includes services relating to the construction or purchase of housing and regulation of housing development. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :06 .
+
+:062 a skos:Concept ;
+	skos:prefLabel "Community development and planning" ;
+	skos:definition "This group includes the administration, provision, support and operation of overall community development. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :06 .
+
+:063 a skos:Concept ;
+	skos:prefLabel "Water supply" ;
+	skos:definition "This group includes water supply services such as administration, regulation and operation of potable water supply. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :06 .
+
+:064 a skos:Concept ;
+	skos:prefLabel "Street lighting" ;
+	skos:definition "This group includes street lighting services such as administration, regulation, installation, operation and maintenance of street lights. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :06 .
+
+:069 a skos:Concept ;
+	skos:prefLabel "Housing and community amenities n.e.c." ;
+	skos:definition "This group includes services relating to housing and community development not elsewhere classified to LGPC 06. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :06 .
+
+:071 a skos:Concept ;
+	skos:prefLabel "Community health services" ;
+	skos:definition "This group includes medical, dental and paramedical services delivered in a community setting. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :07 .
+
+:072 a skos:Concept ;
+	skos:prefLabel "Nursing and convalescent home services" ;
+	skos:definition "This group includes nursing and convalescent home services, including provision of long-term care, primarily to persons aged 65 years and over. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :07 .
+
+:073 a skos:Concept ;
+	skos:prefLabel "Public health services" ;
+	skos:definition "This group includes public health services such as population health services, preventative health services and operation and support of medical and maternity centres. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :07 .
+
+:079 a skos:Concept ;
+	skos:prefLabel "Health n.e.c." ;
+	skos:definition "This group includes health-related services not elsewhere classified to LGPC 07. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :07 .
+
+:081 a skos:Concept ;
+	skos:prefLabel "Sport and physical recreation services" ;
+	skos:definition "This group includes services related to the provision of sport and physical recreation services; administration of sport and recreation affairs; and supervision and regulation of sporting facilities and grounds. Sport and recreation services includes support for all kinds of sporting and physical recreation pursuits, such as tennis, football, soccer, golf, netball, swimming, walking, etc. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :08 .
+
+:082 a skos:Concept ;
+	skos:prefLabel "Cultural services" ;
+	skos:definition "This group includes services related to the provision of cultural services; administration of cultural affairs; and supervision and regulation of cultural facilities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :08 .
+
+:083 a skos:Concept ;
+	skos:prefLabel "Religious services" ;
+	skos:definition "This group involves the administration, operation and support of religious groups within the community. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :08 .
+
+:084 a skos:Concept ;
+	skos:prefLabel "Community centres and halls" ;
+	skos:definition "This group involves the construction, maintenance and operation of community centres and halls mainly used for recreation and cultural pursuits. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :08 .
+
+:089 a skos:Concept ;
+	skos:prefLabel "Recreation, culture and religion n.e.c." ;
+	skos:definition "This group involves the administration, operation and support of recreation, cultural and religious services not classified elsewhere in LGPC 08. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :08 .
+
+:091 a skos:Concept ;
+	skos:prefLabel "Pre-primary education" ;
+	skos:definition "This group includes the administration, inspection, support and operation of preschool education services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :09 .
+
+:092 a skos:Concept ;
+	skos:prefLabel "Subsidiary services to education" ;
+	skos:definition "This group includes the provision of services to aid education. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :09 .
+
+:099 a skos:Concept ;
+	skos:prefLabel "Education n.e.c." ;
+	skos:definition "This group covers the administration, inspection, operation or support of activities relating to education which cannot be classified elsewhere in LGPC 09. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :09 .
+
+:101 a skos:Concept ;
+	skos:prefLabel "Family and children services" ;
+	skos:definition "This group covers social protection services and assistance delivered to families and children, including short-term and long-term care or shelter. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :10 .
+
+:102 a skos:Concept ;
+	skos:prefLabel "Aged services" ;
+	skos:definition "This group covers social protection services and assistance delivered through aged services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :10 .
+
+:103 a skos:Concept ;
+	skos:prefLabel "Services for people with a disability" ;
+	skos:definition "This group covers social protection services and assistance delivered for people with a disability. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :10 .
+
+:109 a skos:Concept ;
+	skos:prefLabel "Social protection n.e.c." ;
+	skos:definition "This group covers the administration, operation and support of activities relating to social protection which cannot be classified to LGPC 101, 102. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :10 .
+
+
+:0111 a skos:Concept ;
+	skos:prefLabel "Executive and legislative functions" ;
+	skos:definition "This class involves the administration, operation and support of executive and legislative functions and all elements associated with corporate governance. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :011 .
+
+:0112 a skos:Concept ;
+	skos:prefLabel "Financial and fiscal affairs" ;
+	skos:definition "This class involves administration, support and operation of financial and fiscal affairs. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :011 .
+
+:0120 a skos:Concept ;
+	skos:prefLabel "Public debt transactions" ;
+	skos:definition "This class involves interest payments and underwriting and floating government loans. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :012 .
+
+:0130 a skos:Concept ;
+	skos:prefLabel "General purpose intergovernment transactions" ;
+	skos:definition "This class involves outlays relating to grants, advances or other intergovernment transactions that cannot be allocated to purpose. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :013 .
+
+:0190 a skos:Concept ;
+	skos:prefLabel "General public services n.e.c." ;
+	skos:definition "This class involves services which are not connected with a specific function and which are usually undertaken by the central office of council. For example, overall planning and statistical services not connected to a specific function, development and implementation of Human Resource practices and policies, repairs and maintenance, motor pools, and archives not connected with libraries." ;
+	skos:inScheme lgpc: ;
+	skos:broader :019 .
+
+:0310 a skos:Concept ;
+	skos:prefLabel "Fire-protection services " ;
+	skos:definition "This class involves the administration and operation of services for fire safety and the prevention of fire. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :031 .
+
+:0320 a skos:Concept ;
+	skos:prefLabel "Control of domestic animals and livestock " ;
+	skos:definition "This class involves the administration and operation of programs relating to control of domestic animals and stray cattle. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :032 .
+
+:0390 a skos:Concept ;
+	skos:prefLabel "Public order and safety n.e.c. " ;
+	skos:definition "This class involves all administration and operation of programs for public order and safety not elsewhere classified to LGPC 03. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :039 .
+
+:0411 a skos:Concept ;
+	skos:prefLabel "General economic and commercial affairs " ;
+	skos:definition "This class involves the administration of general economic and commercial services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :041 .
+
+:0412 a skos:Concept ;
+	skos:prefLabel "General labour affairs " ;
+	skos:definition "This class involves the administration and operation of issues in relation to general labour services." ;
+	skos:inScheme lgpc: ;
+	skos:broader :041 .
+
+:0421 a skos:Concept ;
+	skos:prefLabel "Agricultural water resource management " ;
+	skos:definition "This class involves the administration regulation, planning, support and management of agricultural water resources. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :042 .
+
+:0422 a skos:Concept ;
+	skos:prefLabel "Agriculture n.e.c." ;
+	skos:definition "This class involves the administration of services to and management of the agriculture industry. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :042 .
+
+:0423 a skos:Concept ;
+	skos:prefLabel "Forestry " ;
+	skos:definition "This class involves the administration of services to and management of the forestry industry. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :042 .
+
+:0431 a skos:Concept ;
+	skos:prefLabel "Gas " ;
+	skos:definition "This class involves natural gas, liquefied petroleum gases and refinery gases, and the distribution of town gas regardless of its composition. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :043 .
+
+:0432 a skos:Concept ;
+	skos:prefLabel "Electricity" ;
+	skos:definition "This class involves both traditional sources of electricity such as thermal and hydro supplies and more recently developed sources such as wind and solar heat. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :043 .
+
+:0439 a skos:Concept ;
+	skos:prefLabel "Fuel and energy n.e.c. " ;
+	skos:definition "This class involves operation of energy services such as coal, wood, alcohol and petroleum. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :043 .
+
+:0441 a skos:Concept ;
+	skos:prefLabel "Road maintenance " ;
+	skos:definition "This class involves all aspects of servicing and operating the road system, including road, shoulder and bridge maintenance. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0442 a skos:Concept ;
+	skos:prefLabel "Road rehabilitation" ;
+	skos:definition "This class involves reinstating failed road pavements to existing standards. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0443 a skos:Concept ;
+	skos:prefLabel "Road construction " ;
+	skos:definition "This class involves all aspects improving the design standard of existing roads and bridges, building new roads and bridges, installation of traffic lights and other extensions and improvements to road systems. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0444 a skos:Concept ;
+	skos:prefLabel "Roadside vegetation " ;
+	skos:definition "This class involves establishing and maintaining roadside vegetation, including roadsides, rest areas and median strips. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0445 a skos:Concept ;
+	skos:prefLabel "Bus transportation " ;
+	skos:definition "This class involves administration and operation of bus services and bus transport systems and related infrastructure. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0446 a skos:Concept ;
+	skos:prefLabel "Parking services " ;
+	skos:definition "This class involves administration and operation of on and off street parking. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0449 a skos:Concept ;
+	skos:prefLabel "Road transport n.e.c. " ;
+	skos:definition "This class involves all transport affairs and services not elsewhere classified to LGPC 044. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :044 .
+
+:0451 a skos:Concept ;
+	skos:prefLabel "Water transport " ;
+	skos:definition "This class involves administration, construction, regulation and operation of water transport facilities and services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :045 .
+
+:0452 a skos:Concept ;
+	skos:prefLabel "Air transport " ;
+	skos:definition "This class involves administration, construction, regulation and operation of air transport facilities and services. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :045 .
+
+:0459 a skos:Concept ;
+	skos:prefLabel "Transport systems n.e.c. " ;
+	skos:definition "This class involves all transport affairs and services not elsewhere classified to LGPC 045. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :045 .
+
+:0461 a skos:Concept ;
+	skos:prefLabel "Mining of mineral resources (other than mineral fuels) and quarrying " ;
+	skos:definition "This class involves extracting metal-bearing minerals, sand, clay, stone, quarried materials, chemical and fertiliser minerals, salts, gemstones, asbestos, gypsum etc. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0462 a skos:Concept ;
+	skos:prefLabel "Construction" ;
+	skos:definition "This class involves administration, supervision, development and regulation of the construction industry. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0463 a skos:Concept ;
+	skos:prefLabel "Distributive trades, storage and saleyards" ;
+	skos:definition "This class involves administration, supervision and regulation of affairs and services concerning the distributive trades and the storage and warehouse industry. These include distribution and storage of agricultural produce, stock saleyards and related facilities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0464 a skos:Concept ;
+	skos:prefLabel "Tourism " ;
+	skos:definition "This class involves administration and operation of tourism services and promotion of tourism including liaison with transport, hotel and restaurant industries and other industries benefiting from the presence of tourists. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0465 a skos:Concept ;
+	skos:prefLabel "Multipurpose development projects " ;
+	skos:definition "This class involves administration and operation of services concerning multipurpose development projects. Multipurpose development projects typically consist of integrated facilities for generation of power, flood control, irrigation and navigation. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0469 a skos:Concept ;
+	skos:prefLabel "Other industries n.e.c. " ;
+	skos:definition "This class involves administration and operation of services and regulation of other industries not elsewhere classified in LGPC 046. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :046 .
+
+:0490 a skos:Concept ;
+	skos:prefLabel "Economic affairs n.e.c. " ;
+	skos:definition "This class involves administration and operation of economic affairs not elsewhere classified to LGPC 04. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :049 .
+
+:0511 a skos:Concept ;
+	skos:prefLabel "Solid waste recycling " ;
+	skos:definition "This class involves monitoring, reduction, collection, treatment and disposal of all types of solid waste intended for recycling. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :051 .
+
+:0519 a skos:Concept ;
+	skos:prefLabel "Solid waste management n.e.c. " ;
+	skos:definition "This class involves monitoring, reduction, collection, treatment and disposal of all types of solid waste other than those intended for recycling. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :051 .
+
+:0521 a skos:Concept ;
+	skos:prefLabel "Reused or recycled waste water management " ;
+	skos:definition "This class involves activities relating to the monitoring, reduction, collection, reticulation or treatment of waste water intended for reuse or recycling in an attempt to minimise the use of potable water supplies. 'Waste water' is water that is not potable and requires treatment, storage or disposal and includes rainwater." ;
+	skos:inScheme lgpc: ;
+	skos:broader :052 .
+
+:0529 a skos:Concept ;
+	skos:prefLabel "Waste water management n.e.c." ;
+	skos:definition "This class involves activities relating to the monitoring, reduction, collection or treatment of waste water. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :052 .
+
+:0530 a skos:Concept ;
+	skos:prefLabel "Emissions and air pollution abatement and management " ;
+	skos:definition "This class involves activities aimed at reducing, treating and monitoring air pollutants and greenhouse gas emissions. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :053 .
+
+:0540 a skos:Concept ;
+	skos:prefLabel "Protection of biodiversity and habitat" ;
+	skos:definition "This class involves activities relating to the protection of native plants, animals and habitats, and the protection and restoration of ecosystems. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :054 .
+
+:0551 a skos:Concept ;
+	skos:prefLabel "Prevention of pollutant infiltration" ;
+	skos:definition "This class involves activities aimed at reducing or eliminating polluting substances that may be applied to soil, percolate into groundwater or run-off to surface water. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0552 a skos:Concept ;
+	skos:prefLabel "Decontamination of soil" ;
+	skos:definition "This class involves measures and activities aimed at reducing the quantity of polluting materials in soil. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0553 a skos:Concept ;
+	skos:prefLabel "Restoration of water bodies" ;
+	skos:definition "This class involves measures and activities aimed at reducing the quantity of polluting materials in groundwater and surface water such as rivers and lakes. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0554 a skos:Concept ;
+	skos:prefLabel "Protection of soil from erosion, salinity and other physical degradation " ;
+	skos:definition "This class involves activities and measures aimed at the protection of soil from erosion, salinity and other physical degradation. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0555 a skos:Concept ;
+	skos:prefLabel "Monitoring and control of soil, groundwater and surface water " ;
+	skos:definition "This class involves activities aimed at measuring and controlling the quality and pollution of soils, groundwater and surface water. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0559 a skos:Concept ;
+	skos:prefLabel "Protection and remediation of soil, groundwater and surface water n.e.c. " ;
+	skos:definition "This class involves measures and activities aimed at the protection and remediation of soil, groundwater and surface water from pollution and physical degradation that have not been classified elsewhere in LGPC 055. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :055 .
+
+:0590 a skos:Concept ;
+	skos:prefLabel "Environmental protection n.e.c. " ;
+	skos:definition "This class involves all aspects of administration, operation, management, and support for activities for environmental protection not elsewhere classified in LGPC 05. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :059 .
+
+:0610 a skos:Concept ;
+	skos:prefLabel "Housing development" ;
+	skos:definition "This class involves the construction or purchase of housing and the regulation and development of housing subdivisions and housing standards. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :061 .
+
+:0620 a skos:Concept ;
+	skos:prefLabel "Community development and planning " ;
+	skos:definition "This class involves the administration, provision, support and operation of overall community development. It is mainly concerned with the planning and rehabilitation of communities with the aim of improving quality of life. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :062 .
+
+:0630 a skos:Concept ;
+	skos:prefLabel "Water supply " ;
+	skos:definition "This group includes water supply services such as administration, regulation and operation of potable water supply. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :061 .
+
+:0640 a skos:Concept ;
+	skos:prefLabel "Street lighting" ;
+	skos:definition "This group includes street lighting services such as administration, regulation, installation, operation and maintenance of street lights. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :064 .
+
+:0690 a skos:Concept ;
+	skos:prefLabel "Housing and community amenities n.e.c. " ;
+	skos:definition "This class involves the administration, operation and support of activities such as formulation, coordination of overall policies and plans relating to housing and community amenities not elsewhere classified to LGPC 06. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :069 .
+
+:0710 a skos:Concept ;
+	skos:prefLabel "Community health services " ;
+	skos:definition "This class involves the delivery of medical, dental and paramedical services to the general public by medical, dental and paramedical practitioners and professionals. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :071 .
+
+:0720 a skos:Concept ;
+	skos:prefLabel "Nursing and convalescent home services " ;
+	skos:definition "This class involves nursing homes which provide long-term care involving regular basic nursing care primarily for persons aged 65 years and over. Some of these institutions are located with acute care institutions. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :072 .
+
+:0730 a skos:Concept ;
+	skos:prefLabel "Public health services " ;
+	skos:definition "This class involves public health services consisting of population health and preventative health service programs. Population health services programs are defined as those which aim to protect, promote and/or restore the collective health of whole or specific populations, including healthy populations. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :73 .
+
+:0790 a skos:Concept ;
+	skos:prefLabel "Health n.e.c. " ;
+	skos:definition "This class involves the administration, operation and support of activities such as formulation, coordination and monitoring of overall health services and standards for provision of health services not classified to LGPC 071, 072, 073. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :074 .
+
+:0811 a skos:Concept ;
+	skos:prefLabel "Administration and regulation of sport and physical recreation " ;
+	skos:definition "This class involves administration of recreational and sporting affairs, excluding horse and dog racing. Also included are grants, loans and subsidies to sport and recreation associations, i.e. organisations which administer and/or control sports or physical recreation disciplines. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0812 a skos:Concept ;
+	skos:prefLabel "Sport and physical recreation venues and facilities " ;
+	skos:definition "This class involves purpose built venues and facilities designed for particular sport and physical recreation activities, or groups of such activities. Funding may be for the provision of facilities and infrastructure for sport and recreation, e.g. toilets and changing facilities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0813 a skos:Concept ;
+	skos:prefLabel "Sports grounds" ;
+	skos:definition "This class involves purpose built sport grounds that would normally involve turf management. This may include a club house, public toilets, or other facilities attached to the sport ground. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0814 a skos:Concept ;
+	skos:prefLabel "Recreation parks and reserves" ;
+	skos:definition "This class involves recreation parks, which are green open spaces provided primarily for recreation purposes, and playgrounds. Associated facilities may include public toilets, picnic areas, shelters, or playgrounds and these may be included as part of the recreation park or reserve. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0815 a skos:Concept ;
+	skos:prefLabel "Recreational use of waterways, lakes and beaches" ;
+	skos:definition "This class involves operation, maintenance and construction of waterways for recreational use or other facilities directly associated with the recreational use of waterways such as rivers, lakes or beaches. Recreational use of waterways includes recreational boating, sailing, fishing, surfing, etc. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0816 a skos:Concept ;
+	skos:prefLabel "Assistance to recreational participation - clubs, teams, individuals and events" ;
+	skos:definition "This class involves support to assist the operation of sports or physical recreation clubs or teams, or to assist individuals to participate in sport or physical recreation. This also includes support for sport or physical recreation events. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0819 a skos:Concept ;
+	skos:prefLabel "Sport and physical recreation services n.e.c. " ;
+	skos:definition "This class involves physical recreational and sporting activities or support that is not classified elsewhere in LGPC 081. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :081 .
+
+:0821 a skos:Concept ;
+	skos:prefLabel "Administration of cultural activities " ;
+	skos:definition "This class involves the administration, planning, support, provision, operation, etc. of the infrastructure which allows the community greater access to participation in a wide range of cultural activities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0822 a skos:Concept ;
+	skos:prefLabel "Art museums" ;
+	skos:definition "This class involves the acquisition, collection management, conservation, interpretation, communication and exhibition of visual arts and crafts on the basis of their aesthetic and historic value. Includes the construction, maintenance and operation of venues. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0823 a skos:Concept ;
+	skos:prefLabel "Other museums and cultural heritage " ;
+	skos:definition "This class involves the acquisition, collection management, conservation, interpretation, communication and exhibition of heritage objects and other artefacts on the basis of their aesthetic and historic value. Includes the construction, maintenance and operation of venues." ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0824 a skos:Concept ;
+	skos:prefLabel "Libraries" ;
+	skos:definition "This class involves the administration, planning, support, provision, operation, etc. of archives and libraries for general public use. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0825 a skos:Concept ;
+	skos:prefLabel "Zoological, botanical parks and aquaria " ;
+	skos:definition "This class involves the breeding, preservation, study and display of native and/or exotic fauna (in captivity) and flora. Units such as aquaria operation may include an entertainment or performance element. Includes the construction, maintenance and operation of zoological and botanic parks and aquaria. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0826 a skos:Concept ;
+	skos:prefLabel "Performing arts venues" ;
+	skos:definition "This class involves the construction, maintenance and operation of venues for the presentation and rehearsal of performing arts, including live theatre, dance and music. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0827 a skos:Concept ;
+	skos:prefLabel "Other performing arts" ;
+	skos:definition "This class involves the presentation of artistic performances including music, drama, dance, music theatre and opera, circuses and other forms of performing arts. Included is funding for the administration, support, provision and operation of festivals which provide a range of predominantly artistic performances. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0828 a skos:Concept ;
+	skos:prefLabel "Community arts activities" ;
+	skos:definition "This class involves the administration, support, provision, operation, etc. of arts activities and services provided for the benefit of the community which cannot be assigned to one of the preceding activities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0829 a skos:Concept ;
+	skos:prefLabel "Cultural or arts services n.e.c. " ;
+	skos:definition "This class involves the support, provision, operation, etc. of arts or culture related activities and services that cannot be assigned to one of the preceding categories. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :082 .
+
+:0830 a skos:Concept ;
+	skos:prefLabel "Religious services " ;
+	skos:definition "This class involves the administration, operation and support of religious groups within the community. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :083 .
+
+:0840 a skos:Concept ;
+	skos:prefLabel "Community centres and halls " ;
+	skos:definition "This class involves the construction, maintenance and operation of community centres and halls mainly used for recreation and cultural pursuits. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :084 .
+
+:0890 a skos:Concept ;
+	skos:prefLabel "Recreation, culture and religion n.e.c." ;
+	skos:definition "This class involves the administration, operation or support of activities such as caravan and camping grounds, formulation, coordination and monitoring of overall policies, plans and programs for the promotion of sport, recreation, culture and religion not classified elsewhere in LGPC 08." ;
+	skos:inScheme lgpc: ;
+	skos:broader :089 .
+
+:0910 a skos:Concept ;
+	skos:prefLabel "Pre-primary education " ;
+	skos:definition "This class involves the administration, inspection, support and operation of preschool education programs delivered in a school-type environment designed to bridge the gap between home and school atmosphere. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :091 .
+
+:0920 a skos:Concept ;
+	skos:prefLabel "Subsidiary services to education " ;
+	skos:definition "This class involves the provision of services to aid education by support or operation of transportation, food, lodging, medical and dental care of individual students regardless of level. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :092 .
+
+:0990 a skos:Concept ;
+	skos:prefLabel "Education n.e.c. " ;
+	skos:definition "This class involves the administration, inspection, operation and support of activities relating to education which cannot be classified elsewhere in LGPC 09. Such activities include provision of education other than pre-primary education and formulation, coordination and monitoring of overall policies, plans and programs for education. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :093 .
+
+:1011 a skos:Concept ;
+	skos:prefLabel "Child care services " ;
+	skos:definition "This class involves administration, regulation, operation and support of childcare services and subsidies for child care assistance. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :101 .
+
+:1012 a skos:Concept ;
+	skos:prefLabel "Accommodation services for families and children " ;
+	skos:definition "This class involves administration, regulation, operation and support of providing shelter, board and emergency housing for families and children. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :101 .
+
+:1019 a skos:Concept ;
+	skos:prefLabel "Family and children services n.e.c. " ;
+	skos:definition "This class involves administration, regulation, operation and support of social protection activities relating to family and child social protection services that cannot be classified elsewhere in LGPC 101. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :101 .
+
+:1021 a skos:Concept ;
+	skos:prefLabel "Accommodation services for aged persons " ;
+	skos:definition "This class involves administration and operation of services providing shelter, board and emergency housing to aged persons. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :102 .
+
+:1029 a skos:Concept ;
+	skos:prefLabel "Aged services n.e.c." ;
+	skos:definition "This class involves the administration and operation of aged services, including respite care, information sessions, meals on wheels, and other aged facilities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :102 .
+
+:1031 a skos:Concept ;
+	skos:prefLabel "Accommodation services for people with a disability " ;
+	skos:definition "This class involves administration and operation of services providing shelter, board and emergency housing to people with a disability. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :103 .
+
+:1039 a skos:Concept ;
+	skos:prefLabel "Services for people with a disability n.e.c. " ;
+	skos:definition "This class involves the administration and operation of services for people with a disability, including respite care, information sessions, meals on wheels, and provision other facilities. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :103 .
+
+:1091 a skos:Concept ;
+	skos:prefLabel "Accommodation services n.e.c. " ;
+	skos:definition "This class involves administration and operation of services providing shelter, board and emergency housing not covered by classes 1012, 1021 and 1031. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :109 .
+
+:1099 a skos:Concept ;
+	skos:prefLabel "Social protection n.e.c. " ;
+	skos:definition "This class involves the administration, operation and support of activities relating to social protection which cannot be classified to LGPC 101, 102 or 103. These include the administration, operation and support of activities such as formulation, coordination and monitoring of overall social protection policies, plans and programs. " ;
+	skos:inScheme lgpc: ;
+	skos:broader :109 .
