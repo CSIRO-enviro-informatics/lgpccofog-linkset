@@ -1,8 +1,6 @@
-@prefix : <http://linked.data.gov.au/dataset/lgpccofog/> .
-@prefix lgpc: <http://linked.data.gov.au/def/lgpc/> .
-@prefix cofog: <http://linked.data.gov.au/def/cofog/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix loci: <http://linked.data.gov.au/def/loci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,6 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <http://linked.data.gov.au/linkset/lgpccofog/statement/> .
+@prefix method: <http://linked.data.gov.au/linkset/lgpccofog/method> .
+@prefix nick: <http://linked.data.gov.au/linkset/lgpccofog/nick> .
+
+@prefix lgpc: <http://data.naa.gov.au/def/lgpc/> .
+@prefix cofog: <http://linked.data.gov.au/def/cofog/> .
 
 
 <http://linked.data.gov.au/dataset/lgpccofog>
@@ -24,25 +29,26 @@ COFOG, "Classification of the Functions of Government", is a [United Nations Sta
         sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
         sdo:name "CSIRO" ;
     ] ;
-    dct:creator :nick ;
+    dct:creator nick: ;
     dct:created "2019-07-02"^^xsd:date ;
     # dct:issued ""^^xsd:date ; # not given yet
     # dct:modified ""^^xsd:date ; # not given yet
     void:subjectsTarget <https://data.naa.gov.au/def/lgpc> ;
     void:linkPredicate skos:broadMatch , skos:exactMatch , skos:narrowMatch ;
     void:objectsTarget <http://linked.data.gov.au/def/cofog> ;
-    loci:hadGenerationMethod :method .
+    loci:hadGenerationMethod method: .
 
 
-:method a prov:Plan ;
+method: a prov:Plan ;
     rdfs:label "Transcription from Source" ;
     rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/lgpccofog-linkset/method> ;
     rdfs:comment "The method used to create this Linkset was a manual transcription of correspondences provided by the ABS with the publication of the LGPC. See the code repository containing this Linkset for a copy of that ABS publication. the COFOG Correspondences are given on pages 46-50. The correspondences, as transcribed from the PDF document, are presented in the Excel file correspondences.xlsx in the methods folder of this vocab's repository." ;
-    prov:wasAttributedTo :nick ;
+    prov:wasAttributedTo nick: ;
     prov:generatedAtTime "2019-07-01"^^xsd:date .
 
 
-:nick
+nick:
+    a owl:NamedIndividual , sdo:Person ;
     sdo:email "nicholas.car@csiro.au" ;
     sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
     sdo:memberOf [
