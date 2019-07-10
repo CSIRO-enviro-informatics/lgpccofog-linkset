@@ -12,7 +12,8 @@ COFOG, "Classification of the Functions of Government", is a [United Nations Sta
 This Linkset uses only [SKOS Mapping Properties](https://www.w3.org/TR/skos-reference/#mapping) to map between AGIFT & COFOG-A. Only the following properties are used:
 
 * `skos:exactMatch`
-
+* `skos:broadMatch`
+* `skos:narrowMatch`
 
 
 ## Repository Contents
