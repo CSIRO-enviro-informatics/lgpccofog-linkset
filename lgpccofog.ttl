@@ -1,4 +1,9 @@
+# baseURI http://linked.data.gov.au/dataset/lgpccofog
+# imports: http://linked.data.gov.au/def/lgpc
+# imports: http://linked.data.gov.au/def/cofog
+
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix lgpc: <http://linked.data.gov.au/def/lgpc/> .
 @prefix loci: <http://linked.data.gov.au/def/loci#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -9,16 +14,10 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix : <http://linked.data.gov.au/dataset/lgpccofog/statement/> .
-@prefix method: <http://linked.data.gov.au/dataset/lgpccofog/method> .
-@prefix nick: <http://linked.data.gov.au/dataset/lgpccofog/nick> .
-
-@prefix lgpc: <http://linked.data.gov.au/def/lgpc/> .
-@prefix cofog: <http://linked.data.gov.au/def/cofog/> .
-
-
 <http://linked.data.gov.au/dataset/lgpccofog>
     a loci:Linkset ;
+    owl:imports <http://linked.data.gov.au/def/lgpc> ;
+    owl:imports <http://linked.data.gov.au/def/cofog> ;
     dct:title "LGPC / COFOG Linkset" ;
     dct:description """This Linkset contains [SKOS mapping properties](https://www.w3.org/TR/skos-reference/#mapping) between Concepts in the [LGPC](http://data.naa.gov.au/def/agift) and Concepts in the [COFOG](http://linked.data.gov.au/def/cofog) vocabularies.
 
@@ -29,1272 +28,1272 @@ COFOG, "Classification of the Functions of Government", is a [United Nations Sta
         sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
         sdo:name "CSIRO" ;
     ] ;
-    dct:creator nick: ;
+    dct:creator <nick> ;
     dct:created "2019-07-02"^^xsd:date ;
     # dct:issued ""^^xsd:date ; # not given yet
-    # dct:modified ""^^xsd:date ; # not given yet
+    dct:modified "2019-12-30"^^xsd:date ;
     void:subjectsTarget <http://linked.data.gov.au/def/lgpc> ;
     void:linkPredicate skos:broadMatch , skos:exactMatch , skos:narrowMatch ;
     void:objectsTarget <http://linked.data.gov.au/def/cofog> ;
-    loci:hadGenerationMethod method: .
+    loci:hadGenerationMethod [
+        a prov:Plan ;
+        rdfs:label "Transcription from Source" ;
+        rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/lgpccofog-linkset/method> ;
+        rdfs:comment "The method used to create this Linkset was a manual transcription of correspondences provided by the ABS with the publication of the LGPC. See the code repository containing this Linkset for a copy of that ABS publication. the COFOG Correspondences are given on pages 46-50. The correspondences, as transcribed from the PDF document, are presented in the Excel file correspondences.xlsx in the methods folder of this vocab's repository." ;
+        prov:wasAttributedTo <nick> ;
+        prov:generatedAtTime "2019-07-01"^^xsd:date ;        
+    ] .
 
-
-method: a prov:Plan ;
-    rdfs:label "Transcription from Source" ;
-    rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/lgpccofog-linkset/method> ;
-    rdfs:comment "The method used to create this Linkset was a manual transcription of correspondences provided by the ABS with the publication of the LGPC. See the code repository containing this Linkset for a copy of that ABS publication. the COFOG Correspondences are given on pages 46-50. The correspondences, as transcribed from the PDF document, are presented in the Excel file correspondences.xlsx in the methods folder of this vocab's repository." ;
-    prov:wasAttributedTo nick: ;
-    prov:generatedAtTime "2019-07-01"^^xsd:date .
-
-
-nick:
-    a owl:NamedIndividual , sdo:Person ;
-    sdo:email "nicholas.car@csiro.au" ;
-    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-    sdo:memberOf [
-        sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
-        sdo:name "CSIRO"
+<nick>
+  a owl:NamedIndividual ;
+  a sdo:Person ;
+  sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+  sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+  sdo:memberOf [
+      sdo:url <https://surroundaustralia.com> ;
+      sdo:name "SURROUND Australia Pty Ltd" ;
     ] ;
-    sdo:name "Nicholas J. Car" .
+  sdo:name "Nicholas J. Car" ;
+.
 
-:s001
+<001>
     a rdf:Statement ;
-    rdf:subject lgpc:0439 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0439> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0432 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0432> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s002
+<002>
     a rdf:Statement ;
-    rdf:subject lgpc:0112 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0112> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0112 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0112> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s003
+<003>
     a rdf:Statement ;
-    rdf:subject lgpc:0720 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0720> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0734 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0734> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s004
+<004>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1070 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1070> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s005
+<005>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0481 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0481> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s006
+<006>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0732 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0732> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s007
+<007>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0485 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0485> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s008
+<008>
     a rdf:Statement ;
-    rdf:subject lgpc:0445 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0445> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s009
+<009>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1011 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1011> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s010
+<010>
     a rdf:Statement ;
-    rdf:subject lgpc:0511 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0511> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0510 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0510> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s011
+<011>
     a rdf:Statement ;
-    rdf:subject lgpc:0821 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0821> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s012
+<012>
     a rdf:Statement ;
-    rdf:subject lgpc:0422 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0422> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0421 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0421> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s013
+<013>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0711 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0711> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s014
+<014>
     a rdf:Statement ;
-    rdf:subject lgpc:0555 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0555> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s015
+<015>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0733 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0733> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s016
+<016>
     a rdf:Statement ;
-    rdf:subject lgpc:0444 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0444> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s017
+<017>
     a rdf:Statement ;
-    rdf:subject lgpc:1019 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1019> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1040 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1040> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s018
+<018>
     a rdf:Statement ;
-    rdf:subject lgpc:0824 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0824> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s019
+<019>
     a rdf:Statement ;
-    rdf:subject lgpc:0840 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0840> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0860 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0860> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s020
+<020>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0132 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0132> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s021
+<021>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1050 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1050> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s022
+<022>
     a rdf:Statement ;
-    rdf:subject lgpc:0443 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0443> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s023
+<023>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0486 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0486> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s024
+<024>
     a rdf:Statement ;
-    rdf:subject lgpc:0829 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0829> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0830 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0830> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s025
+<025>
     a rdf:Statement ;
-    rdf:subject lgpc:0890 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0890> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0850 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0850> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s026
+<026>
     a rdf:Statement ;
-    rdf:subject lgpc:0441 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0441> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s027
+<027>
     a rdf:Statement ;
-    rdf:subject lgpc:0822 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0822> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s028
+<028>
     a rdf:Statement ;
-    rdf:subject lgpc:0463 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0463> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0471 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0471> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s029
+<029>
     a rdf:Statement ;
-    rdf:subject lgpc:1012 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1012> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1040 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1040> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s030
+<030>
     a rdf:Statement ;
-    rdf:subject lgpc:0412 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0412> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0412 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0412> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s031
+<031>
     a rdf:Statement ;
-    rdf:subject lgpc:0590 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0590> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0560 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0560> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s032
+<032>
     a rdf:Statement ;
-    rdf:subject lgpc:0814 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0814> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s033
+<033>
     a rdf:Statement ;
-    rdf:subject lgpc:0610 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0610> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1060 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1060> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s034
+<034>
     a rdf:Statement ;
-    rdf:subject lgpc:1031 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1031> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1012 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1012> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s035
+<035>
     a rdf:Statement ;
-    rdf:subject lgpc:032 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/032> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0360 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0360> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s036
+<036>
     a rdf:Statement ;
-    rdf:subject lgpc:0464 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0464> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0473 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0473> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s037
+<037>
     a rdf:Statement ;
-    rdf:subject lgpc:0990 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0990> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0970 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0970> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s038
+<038>
     a rdf:Statement ;
-    rdf:subject lgpc:0439 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0439> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0436 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0436> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s039
+<039>
     a rdf:Statement ;
-    rdf:subject lgpc:0540 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0540> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0540 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0540> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s040
+<040>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0131 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0131> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s041
+<041>
     a rdf:Statement ;
-    rdf:subject lgpc:03 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/03> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:03 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/03> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s042
+<042>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0484 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0484> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s043
+<043>
     a rdf:Statement ;
-    rdf:subject lgpc:09 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/09> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:09 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/09> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s044
+<044>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1030 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1030> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s045
+<045>
     a rdf:Statement ;
-    rdf:subject lgpc:0421 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0421> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0421 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0421> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s046
+<046>
     a rdf:Statement ;
-    rdf:subject lgpc:0469 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0469> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0472 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0472> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s047
+<047>
     a rdf:Statement ;
-    rdf:subject lgpc:0590 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0590> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s048
+<048>
     a rdf:Statement ;
-    rdf:subject lgpc:0811 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0811> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s049
+<049>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0133 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0133> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s050
+<050>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0150 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0150> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s051
+<051>
     a rdf:Statement ;
-    rdf:subject lgpc:0710 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0710> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0724 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0724> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s052
+<052>
     a rdf:Statement ;
-    rdf:subject lgpc:1039 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1039> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1012 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1012> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s053
+<053>
     a rdf:Statement ;
-    rdf:subject lgpc:0521 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0521> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0520 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0520> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s054
+<054>
     a rdf:Statement ;
-    rdf:subject lgpc:0559 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0559> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s055
+<055>
     a rdf:Statement ;
-    rdf:subject lgpc:0829 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0829> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s056
+<056>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0140 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0140> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s057
+<057>
     a rdf:Statement ;
-    rdf:subject lgpc:0590 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0590> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0550 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0550> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s058
+<058>
     a rdf:Statement ;
-    rdf:subject lgpc:0610 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0610> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0610 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0610> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s059
+<059>
     a rdf:Statement ;
-    rdf:subject lgpc:0710 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0710> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0723 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0723> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s060
+<060>
     a rdf:Statement ;
-    rdf:subject lgpc:0554 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0554> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s061
+<061>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0731 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0731> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s062
+<062>
     a rdf:Statement ;
-    rdf:subject lgpc:0830 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0830> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0840 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0840> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s063
+<063>
     a rdf:Statement ;
-    rdf:subject lgpc:0469 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0469> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0423 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0423> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s064
+<064>
     a rdf:Statement ;
-    rdf:subject lgpc:0827 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0827> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s065
+<065>
     a rdf:Statement ;
-    rdf:subject lgpc:0111 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0111> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0111 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0111> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s066
+<066>
     a rdf:Statement ;
-    rdf:subject lgpc:0459 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0459> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0453 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0453> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s067
+<067>
     a rdf:Statement ;
-    rdf:subject lgpc:1011 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1011> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1040 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1040> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s068
+<068>
     a rdf:Statement ;
-    rdf:subject lgpc:0620 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0620> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0620 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0620> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s069
+<069>
     a rdf:Statement ;
-    rdf:subject lgpc:01 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/01> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:01 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/01> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s070
+<070>
     a rdf:Statement ;
-    rdf:subject lgpc:0816 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0816> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s071
+<071>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0750 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0750> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s072
+<072>
     a rdf:Statement ;
-    rdf:subject lgpc:0690 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0690> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0650 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0650> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s073
+<073>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0760 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0760> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s074
+<074>
     a rdf:Statement ;
-    rdf:subject lgpc:06 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/06> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:06 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/06> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s075
+<075>
     a rdf:Statement ;
-    rdf:subject lgpc:0390 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0390> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0350 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0350> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s076
+<076>
     a rdf:Statement ;
-    rdf:subject lgpc:0530 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0530> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s077
+<077>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0487 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0487> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s078
+<078>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1090 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1090> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s079
+<079>
     a rdf:Statement ;
-    rdf:subject lgpc:0439 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0439> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0431 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0431> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s080
+<080>
     a rdf:Statement ;
-    rdf:subject lgpc:0828 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0828> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s081
+<081>
     a rdf:Statement ;
-    rdf:subject lgpc:0890 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0890> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0840 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0840> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s082
+<082>
     a rdf:Statement ;
-    rdf:subject lgpc:1029 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1029> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1020 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1020> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s083
+<083>
     a rdf:Statement ;
-    rdf:subject lgpc:0120 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0120> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0170 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0170> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s084
+<084>
     a rdf:Statement ;
-    rdf:subject lgpc:0825 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0825> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s085
+<085>
     a rdf:Statement ;
-    rdf:subject lgpc:0910 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0910> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0911 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0911> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s086
+<086>
     a rdf:Statement ;
-    rdf:subject lgpc:0469 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0469> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0460 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0460> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s087
+<087>
     a rdf:Statement ;
-    rdf:subject lgpc:0130 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0130> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0180 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0180> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s088
+<088>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0713 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0713> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s089
+<089>
     a rdf:Statement ;
-    rdf:subject lgpc:0459 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0459> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0455 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0455> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s090
+<090>
     a rdf:Statement ;
-    rdf:subject lgpc:1099 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1099> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1080 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1080> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s091
+<091>
     a rdf:Statement ;
-    rdf:subject lgpc:0630 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0630> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0630 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0630> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s092
+<092>
     a rdf:Statement ;
-    rdf:subject lgpc:0190 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0190> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0160 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0160> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s093
+<093>
     a rdf:Statement ;
-    rdf:subject lgpc:04 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/04> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:04 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/04> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s094
+<094>
     a rdf:Statement ;
-    rdf:subject lgpc:0449 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0449> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s095
+<095>
     a rdf:Statement ;
-    rdf:subject lgpc:0461 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0461> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0441 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0441> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s096
+<096>
     a rdf:Statement ;
-    rdf:subject lgpc:0990 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0990> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0950 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0950> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s097
+<097>
     a rdf:Statement ;
-    rdf:subject lgpc:0710 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0710> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0721 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0721> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s098
+<098>
     a rdf:Statement ;
-    rdf:subject lgpc:1021 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1021> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:1020 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1020> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s099
+<099>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0482 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0482> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s100
+<100>
     a rdf:Statement ;
-    rdf:subject lgpc:0390 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0390> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0360 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0360> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s101
+<101>
     a rdf:Statement ;
-    rdf:subject lgpc:10 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/10> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:10 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/10> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s102
+<102>
     a rdf:Statement ;
-    rdf:subject lgpc:0813 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0813> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s103
+<103>
     a rdf:Statement ;
-    rdf:subject lgpc:0990 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0990> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0980 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0980> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s104
+<104>
     a rdf:Statement ;
-    rdf:subject lgpc:0462 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0462> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0443 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0443> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s105
+<105>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0490 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0490> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s106
+<106>
     a rdf:Statement ;
-    rdf:subject lgpc:0431 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0431> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0432 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0432> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s107
+<107>
     a rdf:Statement ;
-    rdf:subject lgpc:0551 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0551> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s108
+<108>
     a rdf:Statement ;
-    rdf:subject lgpc:0815 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0815> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s109
+<109>
     a rdf:Statement ;
-    rdf:subject lgpc:0469 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0469> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0442 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0442> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s110
+<110>
     a rdf:Statement ;
-    rdf:subject lgpc:0442 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0442> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s111
+<111>
     a rdf:Statement ;
-    rdf:subject lgpc:0826 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0826> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s112
+<112>
     a rdf:Statement ;
-    rdf:subject lgpc:1091 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/1091> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:1090 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/1090> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s113
+<113>
     a rdf:Statement ;
-    rdf:subject lgpc:0890 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0890> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s114
+<114>
     a rdf:Statement ;
-    rdf:subject lgpc:07 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/07> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:07 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/07> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s115
+<115>
     a rdf:Statement ;
-    rdf:subject lgpc:0690 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0690> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0660 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0660> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s116
+<116>
     a rdf:Statement ;
-    rdf:subject lgpc:05 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/05> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:05 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/05> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s117
+<117>
     a rdf:Statement ;
-    rdf:subject lgpc:0640 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0640> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0640 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0640> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s118
+<118>
     a rdf:Statement ;
-    rdf:subject lgpc:0451 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0451> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0452 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0452> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s119
+<119>
     a rdf:Statement ;
-    rdf:subject lgpc:0439 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0439> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0433 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0433> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s120
+<120>
     a rdf:Statement ;
-    rdf:subject lgpc:0446 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0446> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0451 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0451> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s121
+<121>
     a rdf:Statement ;
-    rdf:subject lgpc:0553 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0553> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s122
+<122>
     a rdf:Statement ;
-    rdf:subject lgpc:0519 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0519> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0510 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0510> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s123
+<123>
     a rdf:Statement ;
-    rdf:subject lgpc:0790 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0790> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0712 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0712> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s124
+<124>
     a rdf:Statement ;
-    rdf:subject lgpc:0465 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0465> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0474 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0474> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s125
+<125>
     a rdf:Statement ;
-    rdf:subject lgpc:0819 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0819> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s126
+<126>
     a rdf:Statement ;
-    rdf:subject lgpc:0730 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0730> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0740 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0740> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s127
+<127>
     a rdf:Statement ;
-    rdf:subject lgpc:08 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/08> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:08 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/08> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s128
+<128>
     a rdf:Statement ;
-    rdf:subject lgpc:0823 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0823> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0820 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0820> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s129
+<129>
     a rdf:Statement ;
-    rdf:subject lgpc:0890 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0890> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0860 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0860> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s130
+<130>
     a rdf:Statement ;
-    rdf:subject lgpc:0452 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0452> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0454 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0454> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s131
+<131>
     a rdf:Statement ;
-    rdf:subject lgpc:0710 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0710> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0722 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0722> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s132
+<132>
     a rdf:Statement ;
-    rdf:subject lgpc:0411 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0411> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0411 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0411> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s133
+<133>
     a rdf:Statement ;
-    rdf:subject lgpc:0529 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0529> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0520 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0520> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s134
+<134>
     a rdf:Statement ;
-    rdf:subject lgpc:0310 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0310> ;
     rdf:predicate skos:exactMatch ;
-    rdf:object cofog:0320 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0320> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s135
+<135>
     a rdf:Statement ;
-    rdf:subject lgpc:0552 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0552> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0530 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0530> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s136
+<136>
     a rdf:Statement ;
-    rdf:subject lgpc:0439 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0439> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0434 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0434> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s137
+<137>
     a rdf:Statement ;
-    rdf:subject lgpc:0490 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0490> ;
     rdf:predicate skos:narrowMatch ;
-    rdf:object cofog:0483 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0483> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
 
-:s138
+<138>
     a rdf:Statement ;
-    rdf:subject lgpc:0812 ;
+    rdf:subject <http://linked.data.gov.au/def/cofog/0812> ;
     rdf:predicate skos:broadMatch ;
-    rdf:object cofog:0810 ;
+    rdf:object <http://linked.data.gov.au/def/cofog/0810> ;
     dct:created "2019-07-02"^^xsd:date ;
     loci:hadGenerationMethod method: ;
 .
